@@ -5,15 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Di Valerio Choferes | Escuela de Conducción</title>
 
-    <!-- FUENTES DE GOOGLE FONTS: Outfit y Poppins para una tipografía moderna y legible -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-    <!-- ICONOS FONT AWESOME: Para iconografía profesional relacionada a autos y educación -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-    <!-- HOJA DE ESTILOS PERSONALIZADA -->
     <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
@@ -24,13 +21,12 @@
     ========================================================== -->
     <header class="header">
         <nav class="navbar contenedor">
-            <!-- Logotipo de la escuela -->
+
             <a href="#inicio" class="logo">
                 <span class="logo-icono"><i class="fa-solid fa-car-side"></i></span>
                 <span class="logo-texto">Di Valerio <span class="logo-resaltado">Choferes</span></span>
             </a>
 
-            <!-- Enlaces del menú principal -->
             <ul class="nav-menu">
                 <li><a href="#inicio" class="nav-enlace activo">Inicio</a></li>
                 <li><a href="#cursos" class="nav-enlace">Cursos</a></li>
@@ -39,7 +35,6 @@
                 <li><a href="#panel-inscripciones" class="nav-enlace enlace-panel"><i class="fa-solid fa-clipboard-list"></i> Mis Registros</a></li>
             </ul>
 
-            <!-- Botón de acción principal (CTA) -->
             <div class="nav-acciones">
                 <a href="#inscripcion" class="btn btn-naranja">
                     <i class="fa-solid fa-id-card"></i> Inscribirme
@@ -55,12 +50,13 @@
         ========================================================== -->
         <section id="inicio" class="hero-seccion">
             <div class="contenedor hero-grid">
-                <!-- Columna izquierda: Textos y botones de llamada a la acción -->
+
                 <div class="hero-contenido">
                     <span class="insignia"><i class="fa-solid fa-shield-halved"></i> Escuela de Conducción Certificada</span>
                     <h1 class="hero-titulo">Tu licencia comienza con una <span class="texto-naranja">buena decisión</span></h1>
                     <p class="hero-descripcion">
-                        Aprende a conducir con seguridad, confianza y sin estrés. Con nuestros instructores expertos y vehículos modernos de doble comando, dominarás las calles de República Dominicana en tiempo récord.
+                        Aprende a conducir con seguridad, confianza y sin estrés. Con nuestros instructores expertos y 
+                        vehículos modernos de doble comando, dominarás las calles de República Dominicana en tiempo récord.
                     </p>
                     
                     <div class="hero-botones">
@@ -72,7 +68,6 @@
                         </a>
                     </div>
 
-                    <!-- Pequeñas garantías debajo de los botones -->
                     <div class="hero-garantias">
                         <div class="garantia-item">
                             <i class="fa-solid fa-circle-check"></i>
@@ -85,13 +80,11 @@
                     </div>
                 </div>
 
-                <!-- Columna derecha: Tarjeta visual representativa -->
                 <div class="hero-visual">
                     <div class="tarjeta-imagen-hero">
-                        <!-- Imagen representativa de aprendizaje vial -->
+
                         <img src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&w=800&q=80" alt="Persona aprendiendo a conducir con instructor" class="hero-img">
                         
-                        <!-- Tarjeta flotante con estadística destacada -->
                         <div class="tarjeta-flotante">
                             <div class="icono-flotante">
                                 <i class="fa-solid fa-award"></i>
@@ -196,7 +189,7 @@
                 </div>
 
                 <div class="cursos-grid">
-                    <!-- Tarjeta 1: Conducción Básica -->
+
                     <article class="curso-card" data-curso-id="basico">
                         <div class="curso-header">
                             <span class="curso-badge">Más Popular</span>
@@ -226,7 +219,6 @@
                         </div>
                     </article>
 
-                    <!-- Tarjeta 2: Conducción Intensiva -->
                     <article class="curso-card curso-destacado" data-curso-id="intensivo">
                         <div class="curso-header">
                             <span class="curso-badge badge-destacado">Acelerado</span>
@@ -256,7 +248,6 @@
                         </div>
                     </article>
 
-                    <!-- Tarjeta 3: Perfeccionamiento de Conducción -->
                     <article class="curso-card" data-curso-id="perfeccionamiento">
                         <div class="curso-header">
                             <span class="curso-badge">Avanzado</span>
@@ -301,9 +292,8 @@
                     <p class="descripcion-seccion">Completa tu información y asegura tu cupo en minutos sin moverte de casa.</p>
                 </div>
 
-                <!-- CONTENEDOR PRINCIPAL DEL ASISTENTE DE INSCRIPCIÓN -->
                 <div class="inscripcion-caja">
-                    <!-- BARRA DE PROGRESO DE LOS 3 PASOS -->
+
                     <div class="barra-pasos">
                         <div class="paso-indicador activo" id="indicador-paso-1">
                             <div class="paso-circulo">1</div>
@@ -321,19 +311,16 @@
                         </div>
                     </div>
 
-                    <!-- Mensajes de alerta para retroalimentación al usuario -->
                     <div id="mensaje-alerta" class="alerta oculto"></div>
 
-                    <!-- FORMULARIO DE INSCRIPCIÓN -->
                     <form id="formulario-inscripcion" novalidate>
                         
-                        <!-- ==================== PASO 1 ==================== -->
                         <div class="paso-bloque" id="paso-1">
                             <h3 class="paso-titulo"><i class="fa-regular fa-user"></i> Paso 1: Información Personal</h3>
                             <p class="paso-subtitulo">Introduce tus datos de contacto oficiales para tu expediente de conductor.</p>
 
                             <div class="formulario-grid">
-                                <!-- Nombre completo -->
+
                                 <div class="campo-grupo campo-ancho-completo">
                                     <label for="nombre">Nombre completo <span class="requerido">*</span></label>
                                     <div class="input-con-icono">
@@ -343,7 +330,6 @@
                                     <small class="error-texto" id="error-nombre"></small>
                                 </div>
 
-                                <!-- Cédula de identidad -->
                                 <div class="campo-grupo">
                                     <label for="cedula">Cédula de Identidad <span class="requerido">*</span></label>
                                     <div class="input-con-icono">
@@ -353,7 +339,6 @@
                                     <small class="error-texto" id="error-cedula"></small>
                                 </div>
 
-                                <!-- Fecha de nacimiento -->
                                 <div class="campo-grupo">
                                     <label for="fecha-nacimiento">Fecha de Nacimiento <span class="requerido">*</span></label>
                                     <div class="input-con-icono">
@@ -363,7 +348,6 @@
                                     <small class="error-texto" id="error-fecha-nacimiento"></small>
                                 </div>
 
-                                <!-- Teléfono -->
                                 <div class="campo-grupo">
                                     <label for="telefono">Teléfono / WhatsApp <span class="requerido">*</span></label>
                                     <div class="input-con-icono">
@@ -373,7 +357,6 @@
                                     <small class="error-texto" id="error-telefono"></small>
                                 </div>
 
-                                <!-- Correo Electrónico -->
                                 <div class="campo-grupo">
                                     <label for="correo">Correo Electrónico <span class="requerido">*</span></label>
                                     <div class="input-con-icono">
@@ -384,7 +367,6 @@
                                 </div>
                             </div>
 
-                            <!-- Botonera Paso 1 -->
                             <div class="paso-botones fin">
                                 <button type="button" class="btn btn-naranja" id="btn-paso1-siguiente">
                                     Continuar al Paso 2 <i class="fa-solid fa-arrow-right"></i>
@@ -392,13 +374,12 @@
                             </div>
                         </div>
 
-                        <!-- ==================== PASO 2 ==================== -->
                         <div class="paso-bloque oculto" id="paso-2">
                             <h3 class="paso-titulo"><i class="fa-solid fa-car"></i> Paso 2: Selección del Programa</h3>
                             <p class="paso-subtitulo">Selecciona el curso de tu interés, la modalidad y tu disponibilidad horaria.</p>
 
                             <div class="formulario-grid">
-                                <!-- Curso -->
+
                                 <div class="campo-grupo campo-ancho-completo">
                                     <label for="curso-seleccionado">Curso que desea realizar <span class="requerido">*</span></label>
                                     <div class="input-con-icono">
@@ -413,7 +394,6 @@
                                     <small class="error-texto" id="error-curso"></small>
                                 </div>
 
-                                <!-- Modalidad -->
                                 <div class="campo-grupo">
                                     <label for="modalidad">Modalidad de Enseñanza <span class="requerido">*</span></label>
                                     <div class="input-con-icono">
@@ -428,7 +408,6 @@
                                     <small class="error-texto" id="error-modalidad"></small>
                                 </div>
 
-                                <!-- Horario preferido -->
                                 <div class="campo-grupo">
                                     <label for="horario">Horario Preferido <span class="requerido">*</span></label>
                                     <div class="input-con-icono">
@@ -445,7 +424,6 @@
                                     <small class="error-texto" id="error-horario"></small>
                                 </div>
 
-                                <!-- Fecha tentativa de inicio -->
                                 <div class="campo-grupo campo-ancho-completo">
                                     <label for="fecha-inicio">Fecha Tentativa de Inicio <span class="requerido">*</span></label>
                                     <div class="input-con-icono">
@@ -456,7 +434,6 @@
                                 </div>
                             </div>
 
-                            <!-- Botonera Paso 2 -->
                             <div class="paso-botones">
                                 <button type="button" class="btn btn-outline" id="btn-paso2-anterior">
                                     <i class="fa-solid fa-arrow-left"></i> Regresar al Paso 1
@@ -467,12 +444,10 @@
                             </div>
                         </div>
 
-                        <!-- ==================== PASO 3 ==================== -->
                         <div class="paso-bloque oculto" id="paso-3">
                             <h3 class="paso-titulo"><i class="fa-solid fa-clipboard-check"></i> Paso 3: Confirmación y Resumen</h3>
                             <p class="paso-subtitulo">Revisa los datos de tu inscripción antes de confirmar la solicitud.</p>
 
-                            <!-- TARJETA DE RESUMEN DE DATOS -->
                             <div class="resumen-tarjeta">
                                 <div class="resumen-seccion">
                                     <h4><i class="fa-solid fa-user-check"></i> Alumno Inscrito</h4>
@@ -495,14 +470,12 @@
                                     </div>
                                 </div>
 
-                                <!-- Cuadro de total a pagar -->
                                 <div class="resumen-total">
                                     <span>Total a Pagar:</span>
                                     <strong id="resumen-precio">RD$0</strong>
                                 </div>
                             </div>
 
-                            <!-- Casilla de Términos y Condiciones -->
                             <div class="terminos-caja">
                                 <label class="checkbox-label" for="terminos">
                                     <input type="checkbox" id="terminos" name="terminos">
@@ -511,7 +484,6 @@
                                 <small class="error-texto" id="error-terminos"></small>
                             </div>
 
-                            <!-- Botonera Paso 3 -->
                             <div class="paso-botones">
                                 <button type="button" class="btn btn-outline" id="btn-paso3-anterior">
                                     <i class="fa-solid fa-arrow-left"></i> Modificar Datos
@@ -534,14 +506,12 @@
                             Bienvenido/a a la familia de <strong>Di Valerio Choferes</strong>, <span id="exito-nombre-alumno"></span>.
                         </p>
 
-                        <!-- Recuadro con el número generado de inscripción -->
                         <div class="exito-codigo-box">
                             <span class="codigo-etiqueta">Tu Número Oficial de Inscripción:</span>
                             <div class="codigo-numero" id="exito-numero-inscripcion">DVC-0000-0000</div>
                             <small class="codigo-nota">Guarda este número para seguimiento y trámites administrativos.</small>
                         </div>
 
-                        <!-- Instrucciones siguientes -->
                         <div class="exito-instrucciones">
                             <h4><i class="fa-solid fa-circle-info"></i> Próximos Pasos:</h4>
                             <ul>
@@ -578,7 +548,7 @@
                 </div>
 
                 <div class="contacto-grid">
-                    <!-- Datos de la escuela -->
+
                     <div class="contacto-info-tarjeta">
                         <h3>Información de la Escuela</h3>
                         <p class="contacto-intro">Visítanos en nuestras instalaciones centrales o contáctanos por nuestros canales digitales.</p>
@@ -626,7 +596,6 @@
                         </div>
                     </div>
 
-                    <!-- Formulario de consultas rápidas -->
                     <div class="contacto-formulario-tarjeta">
                         <h3>Envíanos un Mensaje</h3>
                         <form id="formulario-contacto" novalidate>
@@ -673,7 +642,7 @@
                 </div>
 
                 <div class="panel-caja">
-                    <!-- Barra de herramientas del panel -->
+
                     <div class="panel-barra">
                         <div class="panel-conteo">
                             Total Registradas: <span class="badge-conteo" id="contador-inscripciones">0</span>
@@ -688,7 +657,6 @@
                         </div>
                     </div>
 
-                    <!-- Mensaje si no hay registros -->
                     <div id="panel-vacio" class="panel-estado-vacio">
                         <i class="fa-regular fa-folder-open icono-vacio"></i>
                         <h4>No hay inscripciones registradas aún</h4>
@@ -696,9 +664,7 @@
                         <a href="#inscripcion" class="btn btn-sm btn-naranja">Comenzar Inscripción</a>
                     </div>
 
-                    <!-- Contenedor donde se generan las tarjetas/filas dinámicas -->
                     <div id="panel-lista-inscripciones" class="panel-grid-registros oculto">
-                        <!-- Las tarjetas de inscripción se insertarán aquí dinámicamente con JavaScript -->
                     </div>
                 </div>
             </div>
@@ -759,7 +725,6 @@
         </div>
     </footer>
 
-    <!-- SCRIPT DE INTERACCIÓN -->
     <script src="js/script.js"></script>
 </body>
 </html>
