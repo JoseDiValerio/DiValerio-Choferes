@@ -142,6 +142,7 @@ document.addEventListener('DOMContentLoaded', function () {
     -------------------------------------------------------------------------- */
 
     // Muestra un paso específico y oculta los demás
+    // El parámetro 'hacerScroll' (por defecto true) decide si la pantalla se desplaza automáticamente
     function irAlPaso(numeroPaso, hacerScroll = true) {
         pasoActual = numeroPaso;
 
@@ -673,6 +674,11 @@ document.addEventListener('DOMContentLoaded', function () {
     // Cargamos los registros previos existentes en localStorage
     cargarInscripcionesDesdeStorage();
 
-    // Arrancamos en el Paso 1
-    irAlPaso(1);
+    // Arrancamos en el Paso 1 sin forzar el desplazamiento de la pantalla
+    irAlPaso(1, false);
+
+    // Aseguramos que la página siempre comience en la parte superior (Hero / Inicio)
+    if (!window.location.hash || window.location.hash === '#inicio') {
+        window.scrollTo(0, 0);
+    }
 });
