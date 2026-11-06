@@ -142,7 +142,7 @@ document.addEventListener('DOMContentLoaded', function () {
     -------------------------------------------------------------------------- */
 
     // Muestra un paso específico y oculta los demás
-    function irAlPaso(numeroPaso) {
+    function irAlPaso(numeroPaso, hacerScroll = true) {
         pasoActual = numeroPaso;
 
         // Ocultamos todos los pasos y la pantalla de éxito
@@ -165,10 +165,13 @@ document.addEventListener('DOMContentLoaded', function () {
         // Actualizamos los círculos y líneas de progreso
         actualizarBarraDeProgreso(numeroPaso);
 
-        // Desplazamiento suave hacia la caja de inscripción para una mejor experiencia visual
-        const contenedorInscripcion = document.getElementById('inscripcion');
-        if (contenedorInscripcion) {
-            contenedorInscripcion.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        // Solo desplazamos la pantalla si el usuario interactuó con los botones (hacerScroll === true)
+        // Esto evita que al abrir o recargar la página se baje automáticamente
+        if (hacerScroll) {
+            const contenedorInscripcion = document.getElementById('inscripcion');
+            if (contenedorInscripcion) {
+                contenedorInscripcion.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
         }
     }
 
