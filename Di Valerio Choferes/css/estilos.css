@@ -1,0 +1,1441 @@
+/* ==========================================================================
+   DI VALERIO CHOFERES - HOJA DE ESTILOS CSS3
+   Diseño moderno, minimalista y profesional para pantallas Desktop.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. VARIABLES CSS (CUSTOM PROPERTIES)
+   Las variables permiten definir los colores y valores recurrentes en un solo
+   lugar para facilitar el mantenimiento y garantizar la coherencia visual.
+-------------------------------------------------------------------------- */
+:root {
+    /* Paleta de colores oficial del proyecto */
+    --color-azul-oscuro: #142B45;   /* Color primario para títulos, navbar y elementos clave */
+    --color-naranja: #FF8A35;       /* Color de acento para botones de acción y destacados */
+    --color-naranja-hover: #E87622; /* Variante ligeramente más oscura para estados hover */
+    --color-blanco: #FFFFFF;        /* Fondos limpios y tarjetas */
+    --color-gris-claro: #F3F5F7;    /* Fondo de secciones alternas y contenedores */
+    --color-gris-oscuro: #475569;   /* Color de párrafos y textos secundarios */
+    
+    /* Colores funcionales para validaciones y estados */
+    --color-verde: #10B981;         /* Éxito y confirmación */
+    --color-verde-fondo: #ECFDF5;
+    --color-rojo: #EF4444;          /* Errores y alertas */
+    --color-rojo-fondo: #FEF2F2;
+    --color-borde: #E2E8F0;         /* Líneas sutiles divisorias */
+
+    /* Tipografías modernas desde Google Fonts */
+    --fuente-titulos: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+    --fuente-texto: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+
+    /* Sombras suaves para dar profundidad y elevación moderna */
+    --sombra-suave: 0 4px 6px -1px rgba(20, 43, 69, 0.05), 0 2px 4px -2px rgba(20, 43, 69, 0.05);
+    --sombra-tarjeta: 0 10px 25px -5px rgba(20, 43, 69, 0.08), 0 8px 10px -6px rgba(20, 43, 69, 0.04);
+    --sombra-hover: 0 20px 30px -10px rgba(20, 43, 69, 0.15);
+
+    /* Bordes redondeados elegantes */
+    --radio-tarjeta: 14px;
+    --radio-boton: 10px;
+    --radio-input: 8px;
+
+    /* Transición suave para micro-interacciones */
+    --transicion: all 0.25s ease-in-out;
+}
+
+/* --------------------------------------------------------------------------
+   2. REINICIO BÁSICO (CSS RESET) Y ESTILOS GLOBALES
+-------------------------------------------------------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Asegura que el padding no altere el ancho de los elementos */
+}
+
+html {
+    scroll-behavior: smooth; /* Desplazamiento suave al hacer clic en enlaces del menú */
+    font-size: 16px;
+}
+
+body {
+    font-family: var(--fuente-texto);
+    color: var(--color-gris-oscuro);
+    background-color: var(--color-blanco);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Estilos de encabezados */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--fuente-titulos);
+    color: var(--color-azul-oscuro);
+    font-weight: 700;
+    line-height: 1.25;
+}
+
+p {
+    margin-bottom: 0.75rem;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transicion);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Clase de utilidad para ocultar elementos mediante JavaScript */
+.oculto {
+    display: none !important;
+}
+
+/* --------------------------------------------------------------------------
+   3. CONTENEDORES Y ESTRUCTURA GENERAL
+-------------------------------------------------------------------------- */
+.contenedor {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.contenedor-estrecho {
+    max-width: 860px;
+}
+
+.seccion {
+    padding: 5rem 0;
+}
+
+.seccion-encabezado {
+    text-align: center;
+    max-width: 680px;
+    margin: 0 auto 3.5rem auto;
+}
+
+.subtitulo-seccion {
+    display: inline-block;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--color-naranja);
+    background-color: rgba(255, 138, 53, 0.1);
+    padding: 0.35rem 1rem;
+    border-radius: 50px;
+    margin-bottom: 0.8rem;
+}
+
+.titulo-seccion {
+    font-size: 2.25rem;
+    margin-bottom: 1rem;
+    letter-spacing: -0.5px;
+}
+
+.descripcion-seccion {
+    font-size: 1.05rem;
+    color: var(--color-gris-oscuro);
+}
+
+.texto-naranja {
+    color: var(--color-naranja);
+}
+
+/* --------------------------------------------------------------------------
+   4. BOTONES REUTILIZABLES (SISTEMA DE DISEÑO)
+-------------------------------------------------------------------------- */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.6rem;
+    font-family: var(--fuente-titulos);
+    font-size: 0.95rem;
+    font-weight: 600;
+    border-radius: var(--radio-boton);
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: var(--transicion);
+    text-align: center;
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+/* Botón Naranja (Acción Primaria / CTA) */
+.btn-naranja {
+    background-color: var(--color-naranja);
+    color: var(--color-blanco);
+    box-shadow: 0 4px 14px rgba(255, 138, 53, 0.35);
+}
+
+.btn-naranja:hover {
+    background-color: var(--color-naranja-hover);
+    box-shadow: 0 6px 20px rgba(255, 138, 53, 0.45);
+    transform: translateY(-2px);
+}
+
+/* Botón Azul Oscuro */
+.btn-azul {
+    background-color: var(--color-azul-oscuro);
+    color: var(--color-blanco);
+}
+
+.btn-azul:hover {
+    background-color: #1e3d60;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(20, 43, 69, 0.25);
+}
+
+/* Botón Verde (Confirmación final) */
+.btn-verde {
+    background-color: var(--color-verde);
+    color: var(--color-blanco);
+    box-shadow: 0 4px 14px rgba(16, 185, 129, 0.3);
+}
+
+.btn-verde:hover {
+    background-color: #059669;
+    transform: translateY(-2px);
+}
+
+/* Botón Outline / Secundario */
+.btn-outline {
+    background-color: transparent;
+    color: var(--color-azul-oscuro);
+    border-color: var(--color-borde);
+}
+
+.btn-outline:hover {
+    border-color: var(--color-azul-oscuro);
+    background-color: rgba(20, 43, 69, 0.03);
+}
+
+/* Botón Pequeño */
+.btn-sm {
+    padding: 0.45rem 1rem;
+    font-size: 0.85rem;
+}
+
+/* Botón Peligro / Borrado */
+.btn-peligro {
+    background-color: transparent;
+    color: var(--color-rojo);
+    border-color: var(--color-rojo);
+}
+
+.btn-peligro:hover {
+    background-color: var(--color-rojo);
+    color: var(--color-blanco);
+}
+
+.btn-bloque {
+    width: 100%;
+}
+
+/* --------------------------------------------------------------------------
+   5. BARRA DE NAVEGACIÓN (HEADER & NAVBAR)
+-------------------------------------------------------------------------- */
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--color-borde);
+    box-shadow: 0 2px 10px rgba(20, 43, 69, 0.03);
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 78px;
+}
+
+/* Logotipo */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-family: var(--fuente-titulos);
+    font-size: 1.45rem;
+    font-weight: 800;
+    color: var(--color-azul-oscuro);
+}
+
+.logo-icono {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    background-color: var(--color-azul-oscuro);
+    color: var(--color-naranja);
+    border-radius: 10px;
+    font-size: 1.2rem;
+}
+
+.logo-resaltado {
+    color: var(--color-naranja);
+}
+
+/* Enlaces del menú */
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav-enlace {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--color-gris-oscuro);
+    padding: 0.5rem 0;
+    position: relative;
+}
+
+.nav-enlace:hover,
+.nav-enlace.activo {
+    color: var(--color-azul-oscuro);
+    font-weight: 600;
+}
+
+.nav-enlace::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background-color: var(--color-naranja);
+    border-radius: 2px;
+    transition: var(--transicion);
+}
+
+.nav-enlace:hover::after,
+.nav-enlace.activo::after {
+    width: 100%;
+}
+
+.enlace-panel {
+    color: var(--color-azul-oscuro);
+    background-color: var(--color-gris-claro);
+    padding: 0.45rem 0.9rem;
+    border-radius: 8px;
+}
+
+.enlace-panel::after {
+    display: none;
+}
+
+/* --------------------------------------------------------------------------
+   6. SECCIÓN INICIO / HERO
+-------------------------------------------------------------------------- */
+.hero-seccion {
+    padding: 5rem 0 4rem 0;
+    background: linear-gradient(180deg, #FFFFFF 0%, var(--color-gris-claro) 100%);
+    overflow: hidden;
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    align-items: center;
+    gap: 4rem;
+}
+
+.insignia {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: #EBF3FA;
+    color: var(--color-azul-oscuro);
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 0.4rem 1rem;
+    border-radius: 50px;
+    margin-bottom: 1.5rem;
+}
+
+.hero-titulo {
+    font-size: 3.2rem;
+    line-height: 1.15;
+    margin-bottom: 1.5rem;
+    letter-spacing: -1px;
+}
+
+.hero-descripcion {
+    font-size: 1.15rem;
+    color: var(--color-gris-oscuro);
+    margin-bottom: 2rem;
+    max-width: 540px;
+}
+
+.hero-botones {
+    display: flex;
+    gap: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.hero-garantias {
+    display: flex;
+    gap: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--color-borde);
+}
+
+.garantia-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--color-azul-oscuro);
+}
+
+.garantia-item i {
+    color: var(--color-verde);
+}
+
+/* Imagen y tarjeta flotante del Hero */
+.hero-visual {
+    position: relative;
+}
+
+.tarjeta-imagen-hero {
+    position: relative;
+    border-radius: var(--radio-tarjeta);
+    box-shadow: var(--sombra-tarjeta);
+}
+
+.hero-img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    border-radius: var(--radio-tarjeta);
+}
+
+.tarjeta-flotante {
+    position: absolute;
+    bottom: -25px;
+    left: -25px;
+    background-color: var(--color-blanco);
+    padding: 1.1rem 1.4rem;
+    border-radius: var(--radio-tarjeta);
+    box-shadow: var(--sombra-hover);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border: 1px solid var(--color-borde);
+}
+
+.icono-flotante {
+    width: 48px;
+    height: 48px;
+    background-color: var(--color-naranja);
+    color: var(--color-blanco);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+}
+
+.texto-flotante strong {
+    display: block;
+    color: var(--color-azul-oscuro);
+    font-size: 1.1rem;
+    font-family: var(--fuente-titulos);
+}
+
+.texto-flotante span {
+    font-size: 0.8rem;
+    color: var(--color-gris-oscuro);
+}
+
+/* --------------------------------------------------------------------------
+   7. SECCIÓN DE ESTADÍSTICAS
+-------------------------------------------------------------------------- */
+.estadisticas-seccion {
+    background-color: var(--color-azul-oscuro);
+    color: var(--color-blanco);
+    padding: 3.5rem 0;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    text-align: center;
+}
+
+.stat-card {
+    padding: 1rem;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.stat-card:last-child {
+    border-right: none;
+}
+
+.stat-icono {
+    font-size: 2rem;
+    color: var(--color-naranja);
+    margin-bottom: 0.75rem;
+}
+
+.stat-numero {
+    font-size: 2.5rem;
+    color: var(--color-blanco);
+    margin-bottom: 0.25rem;
+    letter-spacing: -1px;
+}
+
+.stat-etiqueta {
+    font-size: 0.95rem;
+    color: #94A3B8;
+    margin-bottom: 0;
+}
+
+/* --------------------------------------------------------------------------
+   8. SECCIÓN BENEFICIOS
+-------------------------------------------------------------------------- */
+.beneficios-seccion {
+    background-color: var(--color-gris-claro);
+}
+
+.beneficios-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.8rem;
+}
+
+.beneficio-card {
+    background-color: var(--color-blanco);
+    padding: 2.2rem 1.8rem;
+    border-radius: var(--radio-tarjeta);
+    box-shadow: var(--sombra-suave);
+    border: 1px solid var(--color-borde);
+    transition: var(--transicion);
+}
+
+.beneficio-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--sombra-tarjeta);
+    border-color: rgba(255, 138, 53, 0.3);
+}
+
+.beneficio-icono {
+    width: 60px;
+    height: 60px;
+    background-color: rgba(20, 43, 69, 0.05);
+    color: var(--color-azul-oscuro);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    margin-bottom: 1.4rem;
+    transition: var(--transicion);
+}
+
+.beneficio-card:hover .beneficio-icono {
+    background-color: var(--color-naranja);
+    color: var(--color-blanco);
+}
+
+.beneficio-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+}
+
+.beneficio-card p {
+    font-size: 0.92rem;
+    color: var(--color-gris-oscuro);
+    margin-bottom: 0;
+}
+
+/* --------------------------------------------------------------------------
+   9. SECCIÓN DE CURSOS
+-------------------------------------------------------------------------- */
+.cursos-seccion {
+    background-color: var(--color-blanco);
+}
+
+.cursos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    align-items: stretch;
+}
+
+.curso-card {
+    background-color: var(--color-blanco);
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio-tarjeta);
+    padding: 2.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: var(--sombra-suave);
+    position: relative;
+    transition: var(--transicion);
+}
+
+.curso-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--sombra-tarjeta);
+}
+
+/* Tarjeta destacada (Curso Intensivo) */
+.curso-destacado {
+    border: 2px solid var(--color-naranja);
+    box-shadow: 0 12px 30px -5px rgba(255, 138, 53, 0.2);
+    transform: scale(1.03);
+}
+
+.curso-destacado:hover {
+    transform: scale(1.03) translateY(-6px);
+}
+
+.curso-badge {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    background-color: var(--color-gris-claro);
+    color: var(--color-azul-oscuro);
+    padding: 0.3rem 0.8rem;
+    border-radius: 50px;
+    margin-bottom: 1rem;
+}
+
+.badge-destacado {
+    background-color: var(--color-naranja);
+    color: var(--color-blanco);
+}
+
+.curso-titulo {
+    font-size: 1.5rem;
+    margin-bottom: 0.6rem;
+}
+
+.curso-descripcion {
+    font-size: 0.92rem;
+    color: var(--color-gris-oscuro);
+    min-height: 55px;
+    margin-bottom: 1.5rem;
+}
+
+.curso-precio-box {
+    background-color: var(--color-gris-claro);
+    padding: 1.2rem;
+    border-radius: 10px;
+    margin-bottom: 1.8rem;
+    display: flex;
+    align-items: baseline;
+    gap: 0.35rem;
+}
+
+.curso-precio-box .moneda {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--color-azul-oscuro);
+}
+
+.curso-precio-box .precio {
+    font-size: 2.2rem;
+    font-weight: 800;
+    font-family: var(--fuente-titulos);
+    color: var(--color-azul-oscuro);
+}
+
+.curso-precio-box .pago-unico {
+    font-size: 0.85rem;
+    color: var(--color-gris-oscuro);
+}
+
+.curso-detalles {
+    list-style: none;
+    margin-bottom: 2rem;
+}
+
+.curso-detalles li {
+    font-size: 0.92rem;
+    padding: 0.55rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    border-bottom: 1px dashed var(--color-borde);
+}
+
+.curso-detalles li:last-child {
+    border-bottom: none;
+}
+
+.curso-detalles li i {
+    color: var(--color-naranja);
+    font-size: 0.9rem;
+    width: 18px;
+    text-align: center;
+}
+
+.curso-footer .btn {
+    width: 100%;
+}
+
+/* --------------------------------------------------------------------------
+   10. SECCIÓN DE INSCRIPCIÓN (FORMULARIO EN 3 PASOS)
+-------------------------------------------------------------------------- */
+.inscripcion-seccion {
+    background: linear-gradient(180deg, var(--color-gris-claro) 0%, #FFFFFF 100%);
+}
+
+.inscripcion-caja {
+    background-color: var(--color-blanco);
+    border-radius: var(--radio-tarjeta);
+    box-shadow: var(--sombra-tarjeta);
+    border: 1px solid var(--color-borde);
+    padding: 3rem;
+}
+
+/* Barra de progreso de los 3 pasos */
+.barra-pasos {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.paso-indicador {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    position: relative;
+    z-index: 2;
+}
+
+.paso-circulo {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: var(--color-blanco);
+    border: 2px solid var(--color-borde);
+    color: var(--color-gris-oscuro);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-family: var(--fuente-titulos);
+    transition: var(--transicion);
+}
+
+.paso-texto {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--color-gris-oscuro);
+}
+
+/* Estados activo y completado del indicador */
+.paso-indicador.activo .paso-circulo {
+    background-color: var(--color-naranja);
+    border-color: var(--color-naranja);
+    color: var(--color-blanco);
+    box-shadow: 0 0 0 5px rgba(255, 138, 53, 0.2);
+}
+
+.paso-indicador.activo .paso-texto {
+    color: var(--color-azul-oscuro);
+    font-weight: 700;
+}
+
+.paso-indicador.completado .paso-circulo {
+    background-color: var(--color-verde);
+    border-color: var(--color-verde);
+    color: var(--color-blanco);
+}
+
+.paso-linea {
+    flex: 1;
+    height: 3px;
+    background-color: var(--color-borde);
+    margin: 0 1rem -1.2rem 1rem;
+    position: relative;
+    z-index: 1;
+    transition: var(--transicion);
+}
+
+.paso-linea.completada {
+    background-color: var(--color-verde);
+}
+
+/* Títulos internos de cada paso */
+.paso-titulo {
+    font-size: 1.45rem;
+    margin-bottom: 0.35rem;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.paso-titulo i {
+    color: var(--color-naranja);
+}
+
+.paso-subtitulo {
+    font-size: 0.95rem;
+    color: var(--color-gris-oscuro);
+    margin-bottom: 2rem;
+}
+
+/* Cuadrícula del formulario */
+.formulario-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.4rem;
+    margin-bottom: 2.5rem;
+}
+
+.campo-ancho-completo {
+    grid-column: span 2;
+}
+
+.campo-grupo {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.campo-grupo label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--color-azul-oscuro);
+}
+
+.requerido {
+    color: var(--color-rojo);
+}
+
+/* Campos de entrada con icono */
+.input-con-icono {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-con-icono i {
+    position: absolute;
+    left: 14px;
+    color: #94A3B8;
+    font-size: 0.95rem;
+    pointer-events: none;
+    transition: var(--transicion);
+}
+
+.campo-grupo input,
+.campo-grupo select,
+.campo-grupo textarea {
+    width: 100%;
+    padding: 0.8rem 1rem 0.8rem 2.6rem; /* Espacio izquierdo para que no choque con el icono */
+    font-family: var(--fuente-texto);
+    font-size: 0.95rem;
+    color: var(--color-azul-oscuro);
+    background-color: #FAFBFC;
+    border: 1.5px solid var(--color-borde);
+    border-radius: var(--radio-input);
+    transition: var(--transicion);
+    outline: none;
+}
+
+.campo-grupo input:focus,
+.campo-grupo select:focus,
+.campo-grupo textarea:focus {
+    background-color: var(--color-blanco);
+    border-color: var(--color-naranja);
+    box-shadow: 0 0 0 3px rgba(255, 138, 53, 0.15);
+}
+
+.campo-grupo input:focus + i,
+.input-con-icono:focus-within i {
+    color: var(--color-naranja);
+}
+
+/* Estado de campo con error */
+.campo-grupo input.campo-error,
+.campo-grupo select.campo-error {
+    border-color: var(--color-rojo);
+    background-color: var(--color-rojo-fondo);
+}
+
+.error-texto {
+    color: var(--color-rojo);
+    font-size: 0.8rem;
+    font-weight: 500;
+    min-height: 1.2rem;
+}
+
+/* Botonera de navegación entre pasos */
+.paso-botones {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--color-borde);
+}
+
+.paso-botones.fin {
+    justify-content: flex-end;
+}
+
+/* --------------------------------------------------------------------------
+   11. PASO 3: RESUMEN Y CONFIRMACIÓN
+-------------------------------------------------------------------------- */
+.resumen-tarjeta {
+    background-color: var(--color-gris-claro);
+    border-radius: 12px;
+    padding: 1.8rem;
+    margin-bottom: 2rem;
+    border: 1px solid var(--color-borde);
+}
+
+.resumen-seccion {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.2rem;
+    border-bottom: 1px dashed #CBD5E1;
+}
+
+.resumen-seccion:last-of-type {
+    border-bottom: none;
+}
+
+.resumen-seccion h4 {
+    font-size: 1.1rem;
+    margin-bottom: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--color-azul-oscuro);
+}
+
+.resumen-seccion h4 i {
+    color: var(--color-naranja);
+}
+
+.resumen-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.6rem 1.5rem;
+}
+
+.resumen-grid p {
+    font-size: 0.92rem;
+    margin-bottom: 0;
+}
+
+.resumen-grid strong {
+    color: var(--color-azul-oscuro);
+}
+
+.resumen-total {
+    background-color: var(--color-azul-oscuro);
+    color: var(--color-blanco);
+    padding: 1.2rem 1.5rem;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.1rem;
+}
+
+.resumen-total strong {
+    font-size: 1.8rem;
+    font-family: var(--fuente-titulos);
+    color: var(--color-naranja);
+}
+
+.terminos-caja {
+    margin-bottom: 2rem;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    font-size: 0.9rem;
+    color: var(--color-gris-oscuro);
+    cursor: pointer;
+}
+
+.checkbox-label input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    margin-top: 3px;
+    accent-color: var(--color-naranja);
+    cursor: pointer;
+}
+
+.enlace-terminos {
+    color: var(--color-naranja);
+    text-decoration: underline;
+}
+
+/* --------------------------------------------------------------------------
+   12. PANTALLA DE ÉXITO
+-------------------------------------------------------------------------- */
+.pantalla-exito {
+    text-align: center;
+    padding: 2rem 1rem;
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+.icono-exito {
+    font-size: 4.5rem;
+    color: var(--color-verde);
+    margin-bottom: 1.2rem;
+}
+
+.exito-titulo {
+    font-size: 2.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.exito-subtitulo {
+    font-size: 1.1rem;
+    color: var(--color-gris-oscuro);
+    margin-bottom: 2.2rem;
+}
+
+.exito-codigo-box {
+    background-color: #F8FAFC;
+    border: 2px dashed #94A3B8;
+    border-radius: 12px;
+    padding: 1.5rem;
+    max-width: 480px;
+    margin: 0 auto 2.5rem auto;
+}
+
+.codigo-etiqueta {
+    display: block;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--color-gris-oscuro);
+    margin-bottom: 0.5rem;
+}
+
+.codigo-numero {
+    font-family: var(--fuente-titulos);
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: var(--color-azul-oscuro);
+    letter-spacing: 2px;
+}
+
+.codigo-nota {
+    display: block;
+    font-size: 0.8rem;
+    color: #64748B;
+    margin-top: 0.4rem;
+}
+
+.exito-instrucciones {
+    text-align: left;
+    background-color: var(--color-gris-claro);
+    padding: 1.5rem;
+    border-radius: 10px;
+    max-width: 580px;
+    margin: 0 auto 2.5rem auto;
+}
+
+.exito-instrucciones h4 {
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+    color: var(--color-azul-oscuro);
+}
+
+.exito-instrucciones ul {
+    padding-left: 1.2rem;
+    font-size: 0.9rem;
+}
+
+.exito-instrucciones li {
+    margin-bottom: 0.4rem;
+}
+
+.exito-botones {
+    display: flex;
+    justify-content: center;
+    gap: 1.2rem;
+}
+
+/* --------------------------------------------------------------------------
+   13. MENSAJES DE ALERTA
+-------------------------------------------------------------------------- */
+.alerta {
+    padding: 1rem 1.4rem;
+    border-radius: 8px;
+    margin-bottom: 1.8rem;
+    font-size: 0.92rem;
+    font-weight: 500;
+}
+
+.alerta-error {
+    background-color: var(--color-rojo-fondo);
+    color: #991B1B;
+    border: 1px solid #F87171;
+}
+
+.alerta-exito {
+    background-color: var(--color-verde-fondo);
+    color: #065F46;
+    border: 1px solid #34D399;
+}
+
+/* --------------------------------------------------------------------------
+   14. SECCIÓN CONTACTO
+-------------------------------------------------------------------------- */
+.contacto-seccion {
+    background-color: var(--color-blanco);
+}
+
+.contacto-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+
+.contacto-info-tarjeta,
+.contacto-formulario-tarjeta {
+    background-color: var(--color-blanco);
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio-tarjeta);
+    padding: 2.5rem;
+    box-shadow: var(--sombra-suave);
+}
+
+.contacto-info-tarjeta h3,
+.contacto-formulario-tarjeta h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.6rem;
+}
+
+.contacto-intro {
+    font-size: 0.95rem;
+    color: var(--color-gris-oscuro);
+    margin-bottom: 2rem;
+}
+
+.contacto-items {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.contacto-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.1rem;
+}
+
+.contacto-item .item-icono {
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    background-color: var(--color-gris-claro);
+    color: var(--color-azul-oscuro);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.15rem;
+    flex-shrink: 0;
+}
+
+.contacto-item strong {
+    display: block;
+    color: var(--color-azul-oscuro);
+    font-size: 0.95rem;
+    margin-bottom: 0.2rem;
+}
+
+.contacto-item p {
+    font-size: 0.9rem;
+    color: var(--color-gris-oscuro);
+    margin-bottom: 0;
+}
+
+.contacto-formulario-tarjeta form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    margin-top: 1.5rem;
+}
+
+.contacto-formulario-tarjeta textarea {
+    padding-left: 1rem;
+    resize: vertical;
+}
+
+.contacto-formulario-tarjeta input {
+    padding-left: 1rem;
+}
+
+/* --------------------------------------------------------------------------
+   15. PANEL DE INSCRIPCIONES (CONSULTA LOCALSTORAGE)
+-------------------------------------------------------------------------- */
+.panel-seccion {
+    background-color: var(--color-gris-claro);
+}
+
+.panel-caja {
+    background-color: var(--color-blanco);
+    border-radius: var(--radio-tarjeta);
+    border: 1px solid var(--color-borde);
+    box-shadow: var(--sombra-suave);
+    padding: 2.2rem;
+}
+
+.panel-barra {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--color-borde);
+    margin-bottom: 2rem;
+}
+
+.panel-conteo {
+    font-weight: 600;
+    color: var(--color-azul-oscuro);
+    font-size: 1.05rem;
+}
+
+.badge-conteo {
+    background-color: var(--color-naranja);
+    color: var(--color-blanco);
+    padding: 0.2rem 0.65rem;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    margin-left: 0.35rem;
+}
+
+.panel-acciones {
+    display: flex;
+    gap: 0.8rem;
+}
+
+/* Estado sin registros */
+.panel-estado-vacio {
+    text-align: center;
+    padding: 3.5rem 1rem;
+}
+
+.icono-vacio {
+    font-size: 3.5rem;
+    color: #94A3B8;
+    margin-bottom: 1rem;
+}
+
+.panel-estado-vacio h4 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+
+.panel-estado-vacio p {
+    font-size: 0.95rem;
+    color: var(--color-gris-oscuro);
+    max-width: 480px;
+    margin: 0 auto 1.5rem auto;
+}
+
+/* Cuadrícula de registros guardados */
+.panel-grid-registros {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1.5rem;
+}
+
+.registro-card {
+    background-color: #FAFBFC;
+    border: 1px solid var(--color-borde);
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition: var(--transicion);
+    position: relative;
+}
+
+.registro-card:hover {
+    box-shadow: var(--sombra-suave);
+    border-color: #CBD5E1;
+}
+
+.registro-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.8rem;
+    padding-bottom: 0.6rem;
+    border-bottom: 1px dashed var(--color-borde);
+}
+
+.registro-codigo {
+    font-family: var(--fuente-titulos);
+    font-weight: 700;
+    color: var(--color-naranja);
+    font-size: 0.95rem;
+}
+
+.registro-badge {
+    background-color: var(--color-verde-fondo);
+    color: var(--color-verde);
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.2rem 0.6rem;
+    border-radius: 50px;
+}
+
+.registro-alumno {
+    font-size: 1.15rem;
+    margin-bottom: 0.3rem;
+}
+
+.registro-curso {
+    font-size: 0.9rem;
+    color: var(--color-azul-oscuro);
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+}
+
+.registro-detalles-lista {
+    font-size: 0.85rem;
+    color: var(--color-gris-oscuro);
+    list-style: none;
+}
+
+.registro-detalles-lista li {
+    margin-bottom: 0.3rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* --------------------------------------------------------------------------
+   16. PIE DE PÁGINA (FOOTER)
+-------------------------------------------------------------------------- */
+.footer {
+    background-color: var(--color-azul-oscuro);
+    color: #94A3B8;
+    padding: 4.5rem 0 0 0;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+    gap: 3rem;
+    padding-bottom: 3.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.logo-footer {
+    color: var(--color-blanco);
+    margin-bottom: 1.2rem;
+}
+
+.logo-footer .logo-icono {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.footer-desc {
+    font-size: 0.9rem;
+    line-height: 1.7;
+}
+
+.footer-titulo {
+    color: var(--color-blanco);
+    font-size: 1.1rem;
+    margin-bottom: 1.3rem;
+}
+
+.footer-links {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 0.7rem;
+}
+
+.footer-links a {
+    font-size: 0.9rem;
+    color: #94A3B8;
+}
+
+.footer-links a:hover {
+    color: var(--color-naranja);
+    padding-left: 4px;
+}
+
+.footer-contacto-texto {
+    font-size: 0.9rem;
+    margin-bottom: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.footer-contacto-texto i {
+    color: var(--color-naranja);
+}
+
+.footer-redes {
+    display: flex;
+    gap: 0.8rem;
+    margin-top: 1.2rem;
+}
+
+.footer-redes a {
+    width: 38px;
+    height: 38px;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.08);
+    color: var(--color-blanco);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    transition: var(--transicion);
+}
+
+.footer-redes a:hover {
+    background-color: var(--color-naranja);
+    transform: translateY(-3px);
+}
+
+.footer-derechos {
+    padding: 1.8rem 0;
+    text-align: center;
+    font-size: 0.85rem;
+    color: #64748B;
+}
+
+/* --------------------------------------------------------------------------
+   17. ANIMACIONES SUTILES
+-------------------------------------------------------------------------- */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

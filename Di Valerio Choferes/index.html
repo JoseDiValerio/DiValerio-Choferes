@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Di Valerio Choferes | Escuela de Conducción</title>
+
+    <!-- FUENTES DE GOOGLE FONTS: Outfit y Poppins para una tipografía moderna y legible -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- ICONOS FONT AWESOME: Para iconografía profesional relacionada a autos y educación -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- HOJA DE ESTILOS PERSONALIZADA -->
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <!-- =========================================================
+         1. BARRA DE NAVEGACIÓN (HEADER & NAVBAR)
+         Permite moverse entre las secciones y acceder al botón de inscripción.
+    ========================================================== -->
+    <header class="header">
+        <nav class="navbar contenedor">
+            <!-- Logotipo de la escuela -->
+            <a href="#inicio" class="logo">
+                <span class="logo-icono"><i class="fa-solid fa-car-side"></i></span>
+                <span class="logo-texto">Di Valerio <span class="logo-resaltado">Choferes</span></span>
+            </a>
+
+            <!-- Enlaces del menú principal -->
+            <ul class="nav-menu">
+                <li><a href="#inicio" class="nav-enlace activo">Inicio</a></li>
+                <li><a href="#cursos" class="nav-enlace">Cursos</a></li>
+                <li><a href="#nosotros" class="nav-enlace">Nosotros</a></li>
+                <li><a href="#contacto" class="nav-enlace">Contacto</a></li>
+                <li><a href="#panel-inscripciones" class="nav-enlace enlace-panel"><i class="fa-solid fa-clipboard-list"></i> Mis Registros</a></li>
+            </ul>
+
+            <!-- Botón de acción principal (CTA) -->
+            <div class="nav-acciones">
+                <a href="#inscripcion" class="btn btn-naranja">
+                    <i class="fa-solid fa-id-card"></i> Inscribirme
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- =========================================================
+             2. SECCIÓN DE INICIO (HERO SECTION)
+             Presenta la propuesta de valor y mensaje principal.
+        ========================================================== -->
+        <section id="inicio" class="hero-seccion">
+            <div class="contenedor hero-grid">
+                <!-- Columna izquierda: Textos y botones de llamada a la acción -->
+                <div class="hero-contenido">
+                    <span class="insignia"><i class="fa-solid fa-shield-halved"></i> Escuela de Conducción Certificada</span>
+                    <h1 class="hero-titulo">Tu licencia comienza con una <span class="texto-naranja">buena decisión</span></h1>
+                    <p class="hero-descripcion">
+                        Aprende a conducir con seguridad, confianza y sin estrés. Con nuestros instructores expertos y vehículos modernos de doble comando, dominarás las calles de República Dominicana en tiempo récord.
+                    </p>
+                    
+                    <div class="hero-botones">
+                        <a href="#cursos" class="btn btn-azul">
+                            <i class="fa-solid fa-graduation-cap"></i> Ver Cursos Disponibles
+                        </a>
+                        <a href="#inscripcion" class="btn btn-naranja">
+                            <i class="fa-solid fa-arrow-right"></i> Iniciar Inscripción
+                        </a>
+                    </div>
+
+                    <!-- Pequeñas garantías debajo de los botones -->
+                    <div class="hero-garantias">
+                        <div class="garantia-item">
+                            <i class="fa-solid fa-circle-check"></i>
+                            <span>Inscripción 100% online</span>
+                        </div>
+                        <div class="garantia-item">
+                            <i class="fa-solid fa-circle-check"></i>
+                            <span>Prácticas en tránsito real</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Columna derecha: Tarjeta visual representativa -->
+                <div class="hero-visual">
+                    <div class="tarjeta-imagen-hero">
+                        <!-- Imagen representativa de aprendizaje vial -->
+                        <img src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&w=800&q=80" alt="Persona aprendiendo a conducir con instructor" class="hero-img">
+                        
+                        <!-- Tarjeta flotante con estadística destacada -->
+                        <div class="tarjeta-flotante">
+                            <div class="icono-flotante">
+                                <i class="fa-solid fa-award"></i>
+                            </div>
+                            <div class="texto-flotante">
+                                <strong>98% Aprobación</strong>
+                                <span>Al primer intento en el INTRANTR</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================================================
+             3. SECCIÓN DE ESTADÍSTICAS
+             Muestra datos de confianza y credibilidad de la escuela.
+        ========================================================== -->
+        <section class="estadisticas-seccion">
+            <div class="contenedor stats-grid">
+                <div class="stat-card">
+                    <i class="fa-solid fa-calendar-check stat-icono"></i>
+                    <h3 class="stat-numero">+10</h3>
+                    <p class="stat-etiqueta">Años de Trayectoria</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fa-solid fa-user-graduate stat-icono"></i>
+                    <h3 class="stat-numero">+5,000</h3>
+                    <p class="stat-etiqueta">Alumnos Graduados</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fa-solid fa-car stat-icono"></i>
+                    <h3 class="stat-numero">100%</h3>
+                    <p class="stat-etiqueta">Vehículos Doble Comando</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fa-solid fa-star stat-icono"></i>
+                    <h3 class="stat-numero">4.9 / 5</h3>
+                    <p class="stat-etiqueta">Satisfacción de Clientes</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================================================
+             4. SECCIÓN NOSOTROS Y BENEFICIOS
+             Explica por qué los alumnos eligen Di Valerio Choferes.
+        ========================================================== -->
+        <section id="nosotros" class="seccion beneficios-seccion">
+            <div class="contenedor">
+                <div class="seccion-encabezado">
+                    <span class="subtitulo-seccion">¿Por qué elegirnos?</span>
+                    <h2 class="titulo-seccion">Beneficios de Estudiar en Di Valerio Choferes</h2>
+                    <p class="descripcion-seccion">Diseñamos una metodología enfocada en vencer el miedo al volante y crear conductores responsables.</p>
+                </div>
+
+                <div class="beneficios-grid">
+                    <div class="beneficio-card">
+                        <div class="beneficio-icono">
+                            <i class="fa-solid fa-user-tie"></i>
+                        </div>
+                        <h3>Instructores Certificados</h3>
+                        <p>Profesionales pacientes, capacitados en pedagogía vial y técnicas de manejo a la defensiva.</p>
+                    </div>
+
+                    <div class="beneficio-card">
+                        <div class="beneficio-icono">
+                            <i class="fa-solid fa-shield-virus"></i>
+                        </div>
+                        <h3>Flota Moderna y Segura</h3>
+                        <p>Todos nuestros vehículos cuentan con pedalera auxiliar (doble mando) para tu total seguridad.</p>
+                    </div>
+
+                    <div class="beneficio-card">
+                        <div class="beneficio-icono">
+                            <i class="fa-solid fa-clock"></i>
+                        </div>
+                        <h3>Horarios Flexibles</h3>
+                        <p>Clases matutinas, vespertinas y fines de semana adaptadas a tu trabajo o estudios universitarios.</p>
+                    </div>
+
+                    <div class="beneficio-card">
+                        <div class="beneficio-icono">
+                            <i class="fa-solid fa-map-location-dot"></i>
+                        </div>
+                        <h3>Circuito y Tráfico Real</h3>
+                        <p>Practicamos primero en áreas controladas y luego en avenidas principales para darte total soltura.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================================================
+             5. SECCIÓN DE CURSOS
+             Muestra los tres programas académicos con sus detalles y precios.
+        ========================================================== -->
+        <section id="cursos" class="seccion cursos-seccion">
+            <div class="contenedor">
+                <div class="seccion-encabezado">
+                    <span class="subtitulo-seccion">Nuestros Programas</span>
+                    <h2 class="titulo-seccion">Elige el Curso Ideal para Ti</h2>
+                    <p class="descripcion-seccion">Programas diseñados para principiantes y conductores que buscan perfeccionar su técnica.</p>
+                </div>
+
+                <div class="cursos-grid">
+                    <!-- Tarjeta 1: Conducción Básica -->
+                    <article class="curso-card" data-curso-id="basico">
+                        <div class="curso-header">
+                            <span class="curso-badge">Más Popular</span>
+                            <h3 class="curso-titulo">Conducción Básica</h3>
+                            <p class="curso-descripcion">Ideal para principiantes sin experiencia previa al volante. Formación integral teórica y práctica.</p>
+                        </div>
+                        <div class="curso-precio-box">
+                            <span class="moneda">RD$</span>
+                            <span class="precio">8,500</span>
+                            <span class="pago-unico">/ Pago único</span>
+                        </div>
+                        <ul class="curso-detalles">
+                            <li><i class="fa-solid fa-clock"></i> <strong>Duración:</strong> 4 semanas</li>
+                            <li><i class="fa-solid fa-book-open"></i> <strong>Modalidad:</strong> Teórica y práctica</li>
+                            <li><i class="fa-solid fa-check"></i> 16 horas de práctica al volante</li>
+                            <li><i class="fa-solid fa-check"></i> Manual de leyes de tránsito dominicano</li>
+                            <li><i class="fa-solid fa-check"></i> Simulador de examen de licencia</li>
+                        </ul>
+                        <div class="curso-footer">
+                            <button class="btn btn-outline btn-seleccionar-curso" 
+                                    data-nombre="Conducción Básica" 
+                                    data-precio="8500" 
+                                    data-duracion="4 semanas"
+                                    data-modalidad="Teórica y práctica">
+                                <i class="fa-solid fa-check"></i> Seleccionar curso
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- Tarjeta 2: Conducción Intensiva -->
+                    <article class="curso-card curso-destacado" data-curso-id="intensivo">
+                        <div class="curso-header">
+                            <span class="curso-badge badge-destacado">Acelerado</span>
+                            <h3 class="curso-titulo">Conducción Intensiva</h3>
+                            <p class="curso-descripcion">Pensado para quienes necesitan obtener su licencia rápidamente con clases diarias de alta inmersión.</p>
+                        </div>
+                        <div class="curso-precio-box">
+                            <span class="moneda">RD$</span>
+                            <span class="precio">12,000</span>
+                            <span class="pago-unico">/ Pago único</span>
+                        </div>
+                        <ul class="curso-detalles">
+                            <li><i class="fa-solid fa-clock"></i> <strong>Duración:</strong> 2 semanas</li>
+                            <li><i class="fa-solid fa-book-open"></i> <strong>Modalidad:</strong> Teórica y práctica</li>
+                            <li><i class="fa-solid fa-check"></i> 20 horas de práctica intensiva diaria</li>
+                            <li><i class="fa-solid fa-check"></i> Asesoría prioritaria para examen práctico</li>
+                            <li><i class="fa-solid fa-check"></i> Vehículo disponible para día del examen</li>
+                        </ul>
+                        <div class="curso-footer">
+                            <button class="btn btn-naranja btn-seleccionar-curso" 
+                                    data-nombre="Conducción Intensiva" 
+                                    data-precio="12000" 
+                                    data-duracion="2 semanas"
+                                    data-modalidad="Teórica y práctica">
+                                <i class="fa-solid fa-bolt"></i> Seleccionar curso
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- Tarjeta 3: Perfeccionamiento de Conducción -->
+                    <article class="curso-card" data-curso-id="perfeccionamiento">
+                        <div class="curso-header">
+                            <span class="curso-badge">Avanzado</span>
+                            <h3 class="curso-titulo">Perfeccionamiento</h3>
+                            <p class="curso-descripcion">Diseñado para conductores con licencia que desean superar temores, mejorar estacionamiento y carretera.</p>
+                        </div>
+                        <div class="curso-precio-box">
+                            <span class="moneda">RD$</span>
+                            <span class="precio">5,000</span>
+                            <span class="pago-unico">/ Pago único</span>
+                        </div>
+                        <ul class="curso-detalles">
+                            <li><i class="fa-solid fa-clock"></i> <strong>Duración:</strong> 1 semana</li>
+                            <li><i class="fa-solid fa-road"></i> <strong>Modalidad:</strong> Práctica</li>
+                            <li><i class="fa-solid fa-check"></i> 10 horas de maniobras complejas</li>
+                            <li><i class="fa-solid fa-check"></i> Técnicas de estacionamiento en reversa y paralelo</li>
+                            <li><i class="fa-solid fa-check"></i> Manejo en autopistas y horas pico</li>
+                        </ul>
+                        <div class="curso-footer">
+                            <button class="btn btn-outline btn-seleccionar-curso" 
+                                    data-nombre="Perfeccionamiento de Conducción" 
+                                    data-precio="5000" 
+                                    data-duracion="1 semana"
+                                    data-modalidad="Práctica">
+                                <i class="fa-solid fa-check"></i> Seleccionar curso
+                            </button>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================================================
+             6. PROCESO DE INSCRIPCIÓN (FORMULARIO EN 3 PASOS)
+             Flujo guiado para registrarse online sin acudir a la escuela.
+        ========================================================== -->
+        <section id="inscripcion" class="seccion inscripcion-seccion">
+            <div class="contenedor contenedor-estrecho">
+                <div class="seccion-encabezado">
+                    <span class="subtitulo-seccion">Inscripción Online</span>
+                    <h2 class="titulo-seccion">Regístrate en 3 Sencillos Pasos</h2>
+                    <p class="descripcion-seccion">Completa tu información y asegura tu cupo en minutos sin moverte de casa.</p>
+                </div>
+
+                <!-- CONTENEDOR PRINCIPAL DEL ASISTENTE DE INSCRIPCIÓN -->
+                <div class="inscripcion-caja">
+                    <!-- BARRA DE PROGRESO DE LOS 3 PASOS -->
+                    <div class="barra-pasos">
+                        <div class="paso-indicador activo" id="indicador-paso-1">
+                            <div class="paso-circulo">1</div>
+                            <span class="paso-texto">Datos Personales</span>
+                        </div>
+                        <div class="paso-linea" id="linea-1"></div>
+                        <div class="paso-indicador" id="indicador-paso-2">
+                            <div class="paso-circulo">2</div>
+                            <span class="paso-texto">Programa y Horario</span>
+                        </div>
+                        <div class="paso-linea" id="linea-2"></div>
+                        <div class="paso-indicador" id="indicador-paso-3">
+                            <div class="paso-circulo">3</div>
+                            <span class="paso-texto">Confirmación</span>
+                        </div>
+                    </div>
+
+                    <!-- Mensajes de alerta para retroalimentación al usuario -->
+                    <div id="mensaje-alerta" class="alerta oculto"></div>
+
+                    <!-- FORMULARIO DE INSCRIPCIÓN -->
+                    <form id="formulario-inscripcion" novalidate>
+                        
+                        <!-- ==================== PASO 1 ==================== -->
+                        <div class="paso-bloque" id="paso-1">
+                            <h3 class="paso-titulo"><i class="fa-regular fa-user"></i> Paso 1: Información Personal</h3>
+                            <p class="paso-subtitulo">Introduce tus datos de contacto oficiales para tu expediente de conductor.</p>
+
+                            <div class="formulario-grid">
+                                <!-- Nombre completo -->
+                                <div class="campo-grupo campo-ancho-completo">
+                                    <label for="nombre">Nombre completo <span class="requerido">*</span></label>
+                                    <div class="input-con-icono">
+                                        <i class="fa-solid fa-user"></i>
+                                        <input type="text" id="nombre" name="nombre" placeholder="Ej. Juan Carlos Pérez Rodríguez" required>
+                                    </div>
+                                    <small class="error-texto" id="error-nombre"></small>
+                                </div>
+
+                                <!-- Cédula de identidad -->
+                                <div class="campo-grupo">
+                                    <label for="cedula">Cédula de Identidad <span class="requerido">*</span></label>
+                                    <div class="input-con-icono">
+                                        <i class="fa-solid fa-id-card"></i>
+                                        <input type="text" id="cedula" name="cedula" placeholder="001-0000000-0" maxlength="13" required>
+                                    </div>
+                                    <small class="error-texto" id="error-cedula"></small>
+                                </div>
+
+                                <!-- Fecha de nacimiento -->
+                                <div class="campo-grupo">
+                                    <label for="fecha-nacimiento">Fecha de Nacimiento <span class="requerido">*</span></label>
+                                    <div class="input-con-icono">
+                                        <i class="fa-solid fa-calendar-days"></i>
+                                        <input type="date" id="fecha-nacimiento" name="fecha-nacimiento" required>
+                                    </div>
+                                    <small class="error-texto" id="error-fecha-nacimiento"></small>
+                                </div>
+
+                                <!-- Teléfono -->
+                                <div class="campo-grupo">
+                                    <label for="telefono">Teléfono / WhatsApp <span class="requerido">*</span></label>
+                                    <div class="input-con-icono">
+                                        <i class="fa-solid fa-phone"></i>
+                                        <input type="tel" id="telefono" name="telefono" placeholder="(809) 555-0199" required>
+                                    </div>
+                                    <small class="error-texto" id="error-telefono"></small>
+                                </div>
+
+                                <!-- Correo Electrónico -->
+                                <div class="campo-grupo">
+                                    <label for="correo">Correo Electrónico <span class="requerido">*</span></label>
+                                    <div class="input-con-icono">
+                                        <i class="fa-solid fa-envelope"></i>
+                                        <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.com" required>
+                                    </div>
+                                    <small class="error-texto" id="error-correo"></small>
+                                </div>
+                            </div>
+
+                            <!-- Botonera Paso 1 -->
+                            <div class="paso-botones fin">
+                                <button type="button" class="btn btn-naranja" id="btn-paso1-siguiente">
+                                    Continuar al Paso 2 <i class="fa-solid fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- ==================== PASO 2 ==================== -->
+                        <div class="paso-bloque oculto" id="paso-2">
+                            <h3 class="paso-titulo"><i class="fa-solid fa-car"></i> Paso 2: Selección del Programa</h3>
+                            <p class="paso-subtitulo">Selecciona el curso de tu interés, la modalidad y tu disponibilidad horaria.</p>
+
+                            <div class="formulario-grid">
+                                <!-- Curso -->
+                                <div class="campo-grupo campo-ancho-completo">
+                                    <label for="curso-seleccionado">Curso que desea realizar <span class="requerido">*</span></label>
+                                    <div class="input-con-icono">
+                                        <i class="fa-solid fa-graduation-cap"></i>
+                                        <select id="curso-seleccionado" name="curso" required>
+                                            <option value="">-- Selecciona un programa --</option>
+                                            <option value="Conducción Básica" data-precio="8500" data-duracion="4 semanas">Conducción Básica (4 Semanas - RD$8,500)</option>
+                                            <option value="Conducción Intensiva" data-precio="12000" data-duracion="2 semanas">Conducción Intensiva (2 Semanas - RD$12,000)</option>
+                                            <option value="Perfeccionamiento de Conducción" data-precio="5000" data-duracion="1 semana">Perfeccionamiento de Conducción (1 Semana - RD$5,000)</option>
+                                        </select>
+                                    </div>
+                                    <small class="error-texto" id="error-curso"></small>
+                                </div>
+
+                                <!-- Modalidad -->
+                                <div class="campo-grupo">
+                                    <label for="modalidad">Modalidad de Enseñanza <span class="requerido">*</span></label>
+                                    <div class="input-con-icono">
+                                        <i class="fa-solid fa-chalkboard-user"></i>
+                                        <select id="modalidad" name="modalidad" required>
+                                            <option value="">-- Selecciona modalidad --</option>
+                                            <option value="Teórica y Práctica">Teórica y Práctica Presencial</option>
+                                            <option value="Teórica Online + Práctica Presencial">Teórica Online + Práctica Presencial</option>
+                                            <option value="Solo Práctica">Solo Práctica (Para avanzados)</option>
+                                        </select>
+                                    </div>
+                                    <small class="error-texto" id="error-modalidad"></small>
+                                </div>
+
+                                <!-- Horario preferido -->
+                                <div class="campo-grupo">
+                                    <label for="horario">Horario Preferido <span class="requerido">*</span></label>
+                                    <div class="input-con-icono">
+                                        <i class="fa-solid fa-clock"></i>
+                                        <select id="horario" name="horario" required>
+                                            <option value="">-- Selecciona horario --</option>
+                                            <option value="Mañana: 8:00 AM - 10:00 AM">Mañana (8:00 AM - 10:00 AM)</option>
+                                            <option value="Mediodía: 11:00 AM - 1:00 PM">Mediodía (11:00 AM - 1:00 PM)</option>
+                                            <option value="Tarde: 3:00 PM - 5:00 PM">Tarde (3:00 PM - 5:00 PM)</option>
+                                            <option value="Noche: 6:00 PM - 8:00 PM">Noche (6:00 PM - 8:00 PM)</option>
+                                            <option value="Sabatino: 9:00 AM - 1:00 PM">Sábados intensivos (9:00 AM - 1:00 PM)</option>
+                                        </select>
+                                    </div>
+                                    <small class="error-texto" id="error-horario"></small>
+                                </div>
+
+                                <!-- Fecha tentativa de inicio -->
+                                <div class="campo-grupo campo-ancho-completo">
+                                    <label for="fecha-inicio">Fecha Tentativa de Inicio <span class="requerido">*</span></label>
+                                    <div class="input-con-icono">
+                                        <i class="fa-solid fa-calendar-check"></i>
+                                        <input type="date" id="fecha-inicio" name="fecha-inicio" required>
+                                    </div>
+                                    <small class="error-texto" id="error-fecha-inicio"></small>
+                                </div>
+                            </div>
+
+                            <!-- Botonera Paso 2 -->
+                            <div class="paso-botones">
+                                <button type="button" class="btn btn-outline" id="btn-paso2-anterior">
+                                    <i class="fa-solid fa-arrow-left"></i> Regresar al Paso 1
+                                </button>
+                                <button type="button" class="btn btn-naranja" id="btn-paso2-siguiente">
+                                    Continuar al Paso 3 <i class="fa-solid fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- ==================== PASO 3 ==================== -->
+                        <div class="paso-bloque oculto" id="paso-3">
+                            <h3 class="paso-titulo"><i class="fa-solid fa-clipboard-check"></i> Paso 3: Confirmación y Resumen</h3>
+                            <p class="paso-subtitulo">Revisa los datos de tu inscripción antes de confirmar la solicitud.</p>
+
+                            <!-- TARJETA DE RESUMEN DE DATOS -->
+                            <div class="resumen-tarjeta">
+                                <div class="resumen-seccion">
+                                    <h4><i class="fa-solid fa-user-check"></i> Alumno Inscrito</h4>
+                                    <div class="resumen-grid">
+                                        <p><strong>Nombre:</strong> <span id="resumen-nombre">-</span></p>
+                                        <p><strong>Cédula:</strong> <span id="resumen-cedula">-</span></p>
+                                        <p><strong>Teléfono:</strong> <span id="resumen-telefono">-</span></p>
+                                        <p><strong>Correo:</strong> <span id="resumen-correo">-</span></p>
+                                    </div>
+                                </div>
+
+                                <div class="resumen-seccion">
+                                    <h4><i class="fa-solid fa-graduation-cap"></i> Detalles del Curso</h4>
+                                    <div class="resumen-grid">
+                                        <p><strong>Programa:</strong> <span id="resumen-curso">-</span></p>
+                                        <p><strong>Duración:</strong> <span id="resumen-duracion">-</span></p>
+                                        <p><strong>Modalidad:</strong> <span id="resumen-modalidad">-</span></p>
+                                        <p><strong>Horario:</strong> <span id="resumen-horario">-</span></p>
+                                        <p><strong>Fecha de Inicio:</strong> <span id="resumen-fecha-inicio">-</span></p>
+                                    </div>
+                                </div>
+
+                                <!-- Cuadro de total a pagar -->
+                                <div class="resumen-total">
+                                    <span>Total a Pagar:</span>
+                                    <strong id="resumen-precio">RD$0</strong>
+                                </div>
+                            </div>
+
+                            <!-- Casilla de Términos y Condiciones -->
+                            <div class="terminos-caja">
+                                <label class="checkbox-label" for="terminos">
+                                    <input type="checkbox" id="terminos" name="terminos">
+                                    <span>He leído y acepto los <a href="#contacto" class="enlace-terminos">términos y condiciones</a> del servicio, políticas de seguridad vial y reglamento de Di Valerio Choferes.</span>
+                                </label>
+                                <small class="error-texto" id="error-terminos"></small>
+                            </div>
+
+                            <!-- Botonera Paso 3 -->
+                            <div class="paso-botones">
+                                <button type="button" class="btn btn-outline" id="btn-paso3-anterior">
+                                    <i class="fa-solid fa-arrow-left"></i> Modificar Datos
+                                </button>
+                                <button type="submit" class="btn btn-verde" id="btn-confirmar-inscripcion">
+                                    <i class="fa-solid fa-circle-check"></i> Confirmar Inscripción
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+
+                    <!-- ==================== PANTALLA DE ÉXITO ==================== -->
+                    <!-- Se muestra únicamente tras confirmar la inscripción de forma exitosa -->
+                    <div id="pantalla-exito" class="pantalla-exito oculto">
+                        <div class="icono-exito">
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
+                        <h3 class="exito-titulo">¡Inscripción Confirmada con Éxito!</h3>
+                        <p class="exito-subtitulo">
+                            Bienvenido/a a la familia de <strong>Di Valerio Choferes</strong>, <span id="exito-nombre-alumno"></span>.
+                        </p>
+
+                        <!-- Recuadro con el número generado de inscripción -->
+                        <div class="exito-codigo-box">
+                            <span class="codigo-etiqueta">Tu Número Oficial de Inscripción:</span>
+                            <div class="codigo-numero" id="exito-numero-inscripcion">DVC-0000-0000</div>
+                            <small class="codigo-nota">Guarda este número para seguimiento y trámites administrativos.</small>
+                        </div>
+
+                        <!-- Instrucciones siguientes -->
+                        <div class="exito-instrucciones">
+                            <h4><i class="fa-solid fa-circle-info"></i> Próximos Pasos:</h4>
+                            <ul>
+                                <li>Te hemos enviado un correo de bienvenida con el programa detallado.</li>
+                                <li>Nuestro equipo de coordinación te llamará para validar tus documentos.</li>
+                                <li>Podrás consultar tu inscripción en cualquier momento desde la sección <strong>Mis Registros</strong>.</li>
+                            </ul>
+                        </div>
+
+                        <div class="exito-botones">
+                            <button type="button" class="btn btn-naranja" id="btn-nueva-inscripcion">
+                                <i class="fa-solid fa-plus"></i> Realizar Otra Inscripción
+                            </button>
+                            <a href="#panel-inscripciones" class="btn btn-azul" id="btn-ver-en-panel">
+                                <i class="fa-solid fa-list-check"></i> Ver en Mis Registros
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================================================
+             7. SECCIÓN DE CONTACTO
+             Información de la sede ficticia y formulario de dudas.
+        ========================================================== -->
+        <section id="contacto" class="seccion contacto-seccion">
+            <div class="contenedor">
+                <div class="seccion-encabezado">
+                    <span class="subtitulo-seccion">Atención al Cliente</span>
+                    <h2 class="titulo-seccion">¿Tienes Dudas? Contáctanos</h2>
+                    <p class="descripcion-seccion">Estamos listos para asesorarte sobre requisitos legales y modalidades de pago.</p>
+                </div>
+
+                <div class="contacto-grid">
+                    <!-- Datos de la escuela -->
+                    <div class="contacto-info-tarjeta">
+                        <h3>Información de la Escuela</h3>
+                        <p class="contacto-intro">Visítanos en nuestras instalaciones centrales o contáctanos por nuestros canales digitales.</p>
+
+                        <div class="contacto-items">
+                            <div class="contacto-item">
+                                <div class="item-icono"><i class="fa-solid fa-location-dot"></i></div>
+                                <div>
+                                    <strong>Dirección Central:</strong>
+                                    <p>Av. 27 de Febrero #450, Ensanche Naco, Santo Domingo, República Dominicana</p>
+                                </div>
+                            </div>
+
+                            <div class="contacto-item">
+                                <div class="item-icono"><i class="fa-solid fa-phone"></i></div>
+                                <div>
+                                    <strong>Teléfono de Oficina:</strong>
+                                    <p>(809) 555-0192</p>
+                                </div>
+                            </div>
+
+                            <div class="contacto-item">
+                                <div class="item-icono"><i class="fa-brands fa-whatsapp"></i></div>
+                                <div>
+                                    <strong>WhatsApp de Asesoría:</strong>
+                                    <p>(829) 555-0193</p>
+                                </div>
+                            </div>
+
+                            <div class="contacto-item">
+                                <div class="item-icono"><i class="fa-solid fa-envelope"></i></div>
+                                <div>
+                                    <strong>Correo Electrónico:</strong>
+                                    <p>info@divaleriochoferes.com.do</p>
+                                </div>
+                            </div>
+
+                            <div class="contacto-item">
+                                <div class="item-icono"><i class="fa-solid fa-clock"></i></div>
+                                <div>
+                                    <strong>Horario de Atención:</strong>
+                                    <p>Lunes a Viernes: 8:00 AM - 6:00 PM<br>Sábados: 8:00 AM - 2:00 PM</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Formulario de consultas rápidas -->
+                    <div class="contacto-formulario-tarjeta">
+                        <h3>Envíanos un Mensaje</h3>
+                        <form id="formulario-contacto" novalidate>
+                            <div class="campo-grupo">
+                                <label for="contacto-nombre">Nombre y Apellido</label>
+                                <input type="text" id="contacto-nombre" placeholder="Tu nombre" required>
+                            </div>
+
+                            <div class="campo-grupo">
+                                <label for="contacto-correo">Correo Electrónico</label>
+                                <input type="email" id="contacto-correo" placeholder="tu@correo.com" required>
+                            </div>
+
+                            <div class="campo-grupo">
+                                <label for="contacto-telefono">Teléfono</label>
+                                <input type="tel" id="contacto-telefono" placeholder="(809) 000-0000">
+                            </div>
+
+                            <div class="campo-grupo">
+                                <label for="contacto-mensaje">¿En qué podemos ayudarte?</label>
+                                <textarea id="contacto-mensaje" rows="4" placeholder="Escribe tu consulta aquí..." required></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-naranja btn-bloque">
+                                <i class="fa-regular fa-paper-plane"></i> Enviar Mensaje
+                            </button>
+                            <div id="contacto-mensaje-alerta" class="alerta oculto"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================================================
+             8. PANEL DE INSCRIPCIONES (CONSULTA CON LOCALSTORAGE)
+             Permite ver en vivo las inscripciones guardadas en el navegador.
+        ========================================================== -->
+        <section id="panel-inscripciones" class="seccion panel-seccion">
+            <div class="contenedor">
+                <div class="seccion-encabezado">
+                    <span class="subtitulo-seccion">Prototipo Demostrativo</span>
+                    <h2 class="titulo-seccion">Panel de Inscripciones Realizadas</h2>
+                    <p class="descripcion-seccion">Consulta las inscripciones almacenadas en la sesión actual mediante <code>localStorage</code> sin necesidad de base de datos.</p>
+                </div>
+
+                <div class="panel-caja">
+                    <!-- Barra de herramientas del panel -->
+                    <div class="panel-barra">
+                        <div class="panel-conteo">
+                            Total Registradas: <span class="badge-conteo" id="contador-inscripciones">0</span>
+                        </div>
+                        <div class="panel-acciones">
+                            <button type="button" class="btn btn-sm btn-outline" id="btn-recargar-panel">
+                                <i class="fa-solid fa-rotate-right"></i> Actualizar Lista
+                            </button>
+                            <button type="button" class="btn btn-sm btn-peligro" id="btn-limpiar-historial">
+                                <i class="fa-solid fa-trash-can"></i> Limpiar Historial
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Mensaje si no hay registros -->
+                    <div id="panel-vacio" class="panel-estado-vacio">
+                        <i class="fa-regular fa-folder-open icono-vacio"></i>
+                        <h4>No hay inscripciones registradas aún</h4>
+                        <p>Completa el formulario de inscripción superior para ver los datos reflejados en tiempo real.</p>
+                        <a href="#inscripcion" class="btn btn-sm btn-naranja">Comenzar Inscripción</a>
+                    </div>
+
+                    <!-- Contenedor donde se generan las tarjetas/filas dinámicas -->
+                    <div id="panel-lista-inscripciones" class="panel-grid-registros oculto">
+                        <!-- Las tarjetas de inscripción se insertarán aquí dinámicamente con JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- =========================================================
+         9. PIE DE PÁGINA (FOOTER)
+    ========================================================== -->
+    <footer class="footer">
+        <div class="contenedor footer-grid">
+            <div class="footer-columna">
+                <div class="logo logo-footer">
+                    <span class="logo-icono"><i class="fa-solid fa-car-side"></i></span>
+                    <span class="logo-texto">Di Valerio <span class="texto-naranja">Choferes</span></span>
+                </div>
+                <p class="footer-desc">
+                    Escuela de conducción comprometida con la formación de choferes responsables, seguros y respetuosos de las normas viales en la República Dominicana.
+                </p>
+            </div>
+
+            <div class="footer-columna">
+                <h4 class="footer-titulo">Navegación</h4>
+                <ul class="footer-links">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#cursos">Cursos Disponibles</a></li>
+                    <li><a href="#nosotros">Por Qué Elegirnos</a></li>
+                    <li><a href="#inscripcion">Formulario de Inscripción</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-columna">
+                <h4 class="footer-titulo">Cursos Populares</h4>
+                <ul class="footer-links">
+                    <li><a href="#cursos">Conducción Básica (RD$8,500)</a></li>
+                    <li><a href="#cursos">Conducción Intensiva (RD$12,000)</a></li>
+                    <li><a href="#cursos">Perfeccionamiento (RD$5,000)</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-columna">
+                <h4 class="footer-titulo">Redes y Contacto</h4>
+                <p class="footer-contacto-texto"><i class="fa-solid fa-phone"></i> (809) 555-0192</p>
+                <p class="footer-contacto-texto"><i class="fa-solid fa-envelope"></i> info@divaleriochoferes.com.do</p>
+                <div class="footer-redes">
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-derechos">
+            <div class="contenedor">
+                <p>&copy; 2026 Di Valerio Choferes - Escuela de Conducción. Prototipo Académico Funcional. Desarrollado con HTML5, CSS3 y JavaScript.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SCRIPT DE INTERACCIÓN -->
+    <script src="js/script.js"></script>
+</body>
+</html>
