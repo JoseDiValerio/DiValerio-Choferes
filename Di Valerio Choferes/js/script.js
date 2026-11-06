@@ -1,7 +1,5 @@
 /* ==========================================================================
    DI VALERIO CHOFERES - SCRIPT PRINCIPAL JAVASCRIPT
-   Funcionalidades interactivas, asistente de 3 pasos, validaciones y localStorage.
-   Escrito en JavaScript básico (ES6) y comentado para nivel principiante.
    ========================================================================== */
 
 // Esperamos a que todo el contenido HTML esté completamente cargado antes de ejecutar el código
